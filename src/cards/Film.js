@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Image, Segment } from "semantic-ui-react";
 import RelatedPersons from "./RelatedPersons";
+import "../assets/css/styles.css";
 
 const Film = () => {
   const [film, setFilm] = useState([]);
-
   const { id } = useParams();
   const imgURL = "https://starwars-visualguide.com/assets/img/films/";
 
@@ -42,7 +42,7 @@ const Film = () => {
 
   return (
     <>
-      <Segment placeholder style={{ border: "none" }}>
+      <Segment className="segment-container">
         <Grid columns>
           <Image
             src={`${imgURL + getId(film.url)}.jpg`}
@@ -50,7 +50,7 @@ const Film = () => {
             ui={true}
             style={{ paddingLeft: "0" }}
           />
-          <Grid.Column style={{ width: "50%" }}>
+          <Grid.Column className="column-container">
             <h2>{film.title}</h2>
             <strong>Date Created</strong>
             <p>{film.release_date}</p>
@@ -66,8 +66,8 @@ const Film = () => {
         </Grid>
       </Segment>
       <Segment>
-        <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
-          <strong>Personagens</strong>
+        <div className="related-links">
+          <strong>Characters in film</strong>
         </div>
         <RelatedPersons data={personUrls} />
       </Segment>

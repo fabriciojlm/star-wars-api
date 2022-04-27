@@ -37,7 +37,7 @@ const Peoplelist = () => {
 
   return (
     <>
-      <h1 style={{ display: "flex", justifyContent: "space-between" }}>
+      <h1 className="title">
         Peoples
         <Pagination
           activePage={page}

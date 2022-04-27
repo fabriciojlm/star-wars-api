@@ -13,7 +13,6 @@ import "../assets/css/styles.css";
 const Planets = () => {
   const [planets, setPlantes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const imgURL = "https://starwars-visualguide.com/assets/img/planets/";
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -51,13 +50,7 @@ const Planets = () => {
 
   return (
     <>
-      <h1
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          color: "white",
-        }}
-      >
+      <h1 className="title">
         Planets
         <Pagination
           activePage={page}

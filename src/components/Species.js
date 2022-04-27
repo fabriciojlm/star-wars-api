@@ -35,13 +35,7 @@ const Species = () => {
 
   return (
     <>
-      <h1
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          color: "white",
-        }}
-      >
+      <h1 className="title">
         Species
         <Pagination
           activePage={page}

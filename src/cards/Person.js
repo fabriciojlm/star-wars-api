@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Image, Segment } from "semantic-ui-react";
 import Relatedfilms from "./Relatedfilms";
+import "../assets/css/styles.css";
 
 const Person = () => {
   const [person, setPerson] = useState([]);
@@ -40,7 +41,7 @@ const Person = () => {
   const filmsUrl = parseUrls(person.films);
   return (
     <>
-      <Segment style={{ border: "none" }}>
+      <Segment className="segment-container">
         <Grid columns>
           <Image
             src={`${imgURL + getId(person.url)}.jpg`}
@@ -48,7 +49,7 @@ const Person = () => {
             ui={true}
             style={{ paddingLeft: "0" }}
           />
-          <Grid.Column style={{ width: "50%" }}>
+          <Grid.Column className="column-container">
             <h2>{person.name}</h2>
             <strong>Birth Year</strong>
             <p>{person.birth_year}</p>
@@ -75,7 +76,7 @@ const Person = () => {
         </Grid>
       </Segment>
       <Segment>
-        <div style={{ textAlign: "center", paddingBottom: "1rem" }}>
+        <div className="related-links">
           <strong>Films</strong>
         </div>
         <Relatedfilms data={filmsUrl}></Relatedfilms>

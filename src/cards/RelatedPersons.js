@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, Grid } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
 export default function Relatedfilms(data) {
   const [films, setFilms] = useState([]);
-  console.log(data.data[0]);
   let urls = data.data;
   let requests = urls.map((urls) =>
     fetch(`https://swapi.dev/api/people/${urls}`, {
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "cors",
       cache: "no-cache",
     })
   );
@@ -18,7 +17,6 @@ export default function Relatedfilms(data) {
       .then((data) => setFilms(data));
   }, [data]);
 
-  console.log(films);
   function getId(url) {
     return url?.split("/")[url?.split("/").length - 2];
   }

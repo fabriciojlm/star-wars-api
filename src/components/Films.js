@@ -60,15 +60,7 @@ const Films = () => {
 
   return (
     <>
-      <h1
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          color: "white",
-        }}
-      >
-        Films
-      </h1>
+      <h1 className="title">Films</h1>
       {loading ? (
         <Dimmer active inverted>
           <Loader inverted>Loading</Loader>

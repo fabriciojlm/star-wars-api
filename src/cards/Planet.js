@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Image, Segment } from "semantic-ui-react";
+import "../assets/css/styles.css";
 
 const Planet = () => {
   const [planet, setPlant] = useState([]);
@@ -36,10 +37,10 @@ const Planet = () => {
 
   return (
     <>
-      <Segment style={{ border: "none" }}>
+      <Segment className="segment-container">
         <Grid columns>
           {getImage(id)}
-          <Grid.Column style={{ width: "50%" }}>
+          <Grid.Column className="column-container">
             <h2>{planet.name}</h2>
             <strong>Population</strong>
             <p>{planet.population}</p>

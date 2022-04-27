@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Image, Segment } from "semantic-ui-react";
+import "../assets/css/styles.css";
 
 const Specie = () => {
   const [specie, setSpecie] = useState([]);
@@ -22,25 +23,9 @@ const Specie = () => {
     return url?.split("/")[url?.split("/").length - 2];
   }
 
-  var parseUrls = function (value) {
-    var urls = [];
-    var strippedUrls = [];
-    if (value instanceof Array) {
-      urls = value;
-    } else {
-      urls = [value];
-    }
-    strippedUrls = urls.map(function (url) {
-      return url?.split("/")[url.split("/").length - 2];
-    });
-
-    console.log(strippedUrls);
-    return strippedUrls;
-  };
-
   return (
     <>
-      <Segment style={{ border: "none" }}>
+      <Segment className="segment-container">
         <Grid columns>
           <Image
             src={`${imgURL + getId(specie.url)}.jpg`}
@@ -48,7 +33,7 @@ const Specie = () => {
             ui={true}
             style={{ paddingLeft: "0" }}
           />
-          <Grid.Column style={{ width: "50%" }}>
+          <Grid.Column className="column-container">
             <h2>{specie.name}</h2>
             <strong>Classification</strong>
             <p>{specie.classification}</p>
