@@ -8,10 +8,10 @@ export default function Relatedfilms(data) {
   let urls = data.data;
   let requests = urls.map((urls) =>
     fetch(`https://swapi.dev/api/people/${urls}`, {
-      cache: "reload",
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache",
     })
   );
-
   useEffect(() => {
     Promise.all(requests)
       .then((responses) => Promise.all(responses.map((r) => r.json())))

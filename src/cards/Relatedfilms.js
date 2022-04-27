@@ -23,6 +23,7 @@ export default function Relatedfilms(data) {
 
   const getRomanNumeral = function (number) {
     var numeral;
+    // eslint-disable-next-line default-case
     switch (number) {
       case 1:
         numeral = "I";

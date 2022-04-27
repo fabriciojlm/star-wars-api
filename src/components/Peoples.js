@@ -18,7 +18,7 @@ const Peoplelist = () => {
 
   useEffect(() => {
     fetch(`https://swapi.dev/api/people/?page=${page}`, {
-      cache: "default",
+      cache: "no-cache",
     })
       .then((res) => res.json())
       .then((resp) => {

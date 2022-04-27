@@ -5,7 +5,6 @@ import Relatedfilms from "./Relatedfilms";
 
 const Person = () => {
   const [person, setPerson] = useState([]);
-  const [home, setHome] = useState([]);
   const { id } = useParams();
   const imgURL = "https://starwars-visualguide.com/assets/img/characters/";
 
