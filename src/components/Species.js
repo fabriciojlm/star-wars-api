@@ -38,11 +38,13 @@ const Species = () => {
       <h1 className="title">
         Species
         <Pagination
+          boundaryRange={0}
           activePage={page}
           onPageChange={handlePageChange}
-          pointing
-          secondary
           totalPages={4}
+          siblingRange={4}
+          firstItem={null}
+          lastItem={null}
           inverted
         />
       </h1>

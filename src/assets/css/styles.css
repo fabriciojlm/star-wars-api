@@ -1,7 +1,5 @@
-.title {
-  display: flex;
-  justify-content: space-between;
-  color: white;
+.navbar {
+  background: transparent !important;
 }
 
 .segment-container {
@@ -19,4 +17,10 @@
 .related-links {
   text-align: center;
   padding-bottom: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }

@@ -53,11 +53,13 @@ const Planets = () => {
       <h1 className="title">
         Planets
         <Pagination
+          boundaryRange={0}
           activePage={page}
           onPageChange={handlePageChange}
-          pointing
-          secondary
           totalPages={5}
+          siblingRange={4}
+          firstItem={null}
+          lastItem={null}
           inverted
         />
       </h1>

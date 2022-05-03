@@ -40,11 +40,13 @@ const Peoplelist = () => {
       <h1 className="title">
         Peoples
         <Pagination
+          boundaryRange={0}
           activePage={page}
           onPageChange={handlePageChange}
-          pointing
-          secondary
           totalPages={9}
+          siblingRange={4}
+          firstItem={null}
+          lastItem={null}
           inverted
         />
       </h1>

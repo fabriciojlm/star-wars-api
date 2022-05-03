@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Menu, Container, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import "../assets/css/styles.css";
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState("Star Wars Api");
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
-    <Segment inverted>
+    <Segment inverted className="navbar">
       <Menu inverted pointing secondary>
         <Container>
           <Link to="/">
