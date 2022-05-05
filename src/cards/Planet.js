@@ -31,7 +31,7 @@ const Planet = () => {
             "https://starwars-visualguide.com/assets/img/big-placeholder.jpg";
           event.onerror = null;
         }}
-      ></Image>
+       />
     );
   }
 
