@@ -40,7 +40,7 @@ const Planets = () => {
             "https://starwars-visualguide.com/assets/img/placeholder.jpg";
           event.onerror = null;
         }}
-      ></Image>
+       />
     );
   }
 

@@ -79,7 +79,7 @@ const Person = () => {
         <div className="related-links">
           <strong>Films</strong>
         </div>
-        <Relatedfilms data={filmsUrl}></Relatedfilms>
+        <Relatedfilms data={filmsUrl} />
       </Segment>
     </>
   );
